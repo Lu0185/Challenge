@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Challenge.ViewModel.ContactInfo>
+@{
+    ViewBag.Title = "Index";
+}
+
+<br/>
+
+<center>
+    <h2>Contact Information</h2>
+    <hr />
+    <div class="col-sm-12">
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark text-white">
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Address</th>
+                    <th>Street</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Postal Code</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Contacts.FirstName</td>
+                        <td>@item.Contacts.LastName</td>
+                        <td>@item.Addresses.Address</td>
+                        <td>@item.Addresses.Street</td>
+                        <td>@item.Addresses.City</td>
+                        <td>@item.Addresses.State</td>
+                        <td>@item.Addresses.PostalCode</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</center>
+
